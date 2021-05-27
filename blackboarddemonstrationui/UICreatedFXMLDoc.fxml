@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackboarddemonstrationui.UIEventController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="37.0" layoutY="20.0" prefHeight="17.0" prefWidth="111.0" text="Log Info:" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="container" layoutX="27.0" layoutY="53.0" prefHeight="360.0" prefWidth="300.0" style="-fx-border-color: Black;" />
+      <SplitPane dividerPositions="0.4966216216216216" layoutX="27.0" layoutY="439.0" prefHeight="55.0" prefWidth="300.0" style="-fx-border-color: Black;">
+         <items>
+            <AnchorPane fx:id="AFRContainer" prefHeight="44.0" prefWidth="144.0" />
+            <AnchorPane fx:id="RPMContainer" prefHeight="56.0" prefWidth="157.0" />
+         </items>
+      </SplitPane>
+      <AnchorPane layoutX="343.0" layoutY="52.0" prefHeight="444.0" prefWidth="101.0" style="-fx-border-color: black;">
+         <children>
+            <Slider fx:id="slider" disable="true" layoutX="37.0" layoutY="65.0" majorTickUnit="10.0" orientation="VERTICAL" prefHeight="238.0" prefWidth="28.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#accelerate" text="Accelerate" />
+            <Button layoutX="10.0" layoutY="405.0" mnemonicParsing="false" onAction="#simulateKnockEvent" text="Knock Event" />
+            <Button layoutX="15.0" layoutY="331.0" mnemonicParsing="false" onAction="#decelerate" text="Decelerate" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="27.0" layoutY="416.0" prefHeight="25.0" prefWidth="87.0" text="Current AFR" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="419.0" prefHeight="20.0" prefWidth="46.0" text="RPM" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
